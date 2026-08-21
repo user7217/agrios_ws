@@ -8,4 +8,5 @@ navsat_transform:
     broadcast_utm_transform: false
     publish_filtered_gps: true
     use_odometry_yaw: false
-    wait_for_datum: false
+    wait_for_datum: true
+    datum: [30.9, 75.85, 0.0]

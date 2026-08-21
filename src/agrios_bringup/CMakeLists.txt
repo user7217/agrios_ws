@@ -25,5 +25,7 @@ endif()
 
 install(DIRECTORY config launch
   DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY config launch behavior_trees
+  DESTINATION share/${PROJECT_NAME})
 
 ament_package()
