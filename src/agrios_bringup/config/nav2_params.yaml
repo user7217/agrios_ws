@@ -123,7 +123,7 @@ planner_server:
       max_planning_time: 10.0
       motion_model_for_search: "REEDS_SHEPP"
       angle_quantization_bins: 72
-      minimum_turning_radius: 1.1
+      minimum_turning_radius: 2.2
       reverse_penalty: 2.0
       change_penalty: 0.15
       non_straight_penalty: 1.2
