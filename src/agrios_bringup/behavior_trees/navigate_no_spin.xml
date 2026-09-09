@@ -1,4 +1,4 @@
-<root main_tree_to_execute="MainTree">
+<root BTCPP_format="4" main_tree_to_execute="MainTree">
   <BehaviorTree ID="MainTree">
     <RecoveryNode number_of_retries="6" name="NavigateRecovery">
       <PipelineSequence name="NavigateWithReplanning">
@@ -15,14 +15,14 @@
                               service_name="local_costmap/clear_entirely_local_costmap"/>
         </RecoveryNode>
       </PipelineSequence>
-      <SequenceStar name="RecoveryActions">
+      <Sequence name="RecoveryActions">
         <ClearEntireCostmap name="ClearGlobalCostmap-Subtree"
                             service_name="global_costmap/clear_entirely_global_costmap"/>
         <ClearEntireCostmap name="ClearLocalCostmap-Subtree"
                             service_name="local_costmap/clear_entirely_local_costmap"/>
         <BackUp backup_dist="1.0" backup_speed="0.3"/>
         <Wait wait_duration="5"/>
-      </SequenceStar>
+      </Sequence>
     </RecoveryNode>
   </BehaviorTree>
 </root>

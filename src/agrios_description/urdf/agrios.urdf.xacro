@@ -128,8 +128,8 @@
 
   <!-- ===== Gazebo Fortress plugins ===== -->
   <gazebo>
-    <plugin filename="ignition-gazebo-ackermann-steering-system"
-        name="ignition::gazebo::systems::AckermannSteering">
+    <plugin filename="gz-sim-ackermann-steering-system"
+        name="gz::sim::systems::AckermannSteering">
       <left_joint>fl_wheel_joint</left_joint>
       <right_joint>fr_wheel_joint</right_joint>
       <left_steering_joint>fl_steer_joint</left_steering_joint>
@@ -150,8 +150,8 @@
       <tf_topic>/gz_tf_unused</tf_topic>
     </plugin>
 
-  <plugin filename="ignition-gazebo-odometry-publisher-system"
-        name="ignition::gazebo::systems::OdometryPublisher">
+  <plugin filename="gz-sim-odometry-publisher-system"
+        name="gz::sim::systems::OdometryPublisher">
     <odom_frame>world</odom_frame>
     <robot_base_frame>base_footprint</robot_base_frame>
     <odom_topic>ground_truth</odom_topic>
@@ -160,18 +160,18 @@
     <dimensions>3</dimensions>
   </plugin>
 
-  <plugin filename="ignition-gazebo-imu-system"
-        name="ignition::gazebo::systems::Imu"/>
-<plugin filename="ignition-gazebo-navsat-system"
-        name="ignition::gazebo::systems::NavSat"/>
+  <plugin filename="gz-sim-imu-system"
+        name="gz::sim::systems::Imu"/>
+<plugin filename="gz-sim-navsat-system"
+        name="gz::sim::systems::NavSat"/>
 
-  <plugin filename="ignition-gazebo-sensors-system"
-          name="ignition::gazebo::systems::Sensors">
+  <plugin filename="gz-sim-sensors-system"
+          name="gz::sim::systems::Sensors">
     <render_engine>ogre2</render_engine>
   </plugin>
 
-    <plugin filename="ignition-gazebo-joint-state-publisher-system"
-            name="ignition::gazebo::systems::JointStatePublisher">
+    <plugin filename="gz-sim-joint-state-publisher-system"
+            name="gz::sim::systems::JointStatePublisher">
       <topic>joint_states</topic>
     </plugin>
   </gazebo>
@@ -207,10 +207,10 @@
 
   <gazebo reference="lidar_link">
     <sensor name="lidar" type="gpu_lidar">
-      <ignition_frame_id>lidar_link</ignition_frame_id>
+      <gz_frame_id>lidar_link</gz_frame_id>
       <pose>0 0 0 0 0 0</pose>
       <topic>scan</topic>
-      <update_rate>10</update_rate>
+      <update_rate>100</update_rate>
       <lidar>
         <scan>
           <horizontal>
@@ -250,7 +250,7 @@
 
   <gazebo reference="imu_link">
     <sensor name="imu" type="imu">
-      <ignition_frame_id>imu_link</ignition_frame_id>
+      <gz_frame_id>imu_link</gz_frame_id>
       <topic>imu</topic>
       <update_rate>200</update_rate>
       <always_on>true</always_on>
@@ -270,7 +270,7 @@
 
   <gazebo reference="gps_link">
     <sensor name="navsat" type="navsat">
-      <ignition_frame_id>gps_link</ignition_frame_id>
+      <gz_frame_id>gps_link</gz_frame_id>
       <topic>navsat</topic>
       <update_rate>10</update_rate>
       <always_on>true</always_on>
