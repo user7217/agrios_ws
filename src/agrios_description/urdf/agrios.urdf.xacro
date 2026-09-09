@@ -272,7 +272,7 @@
     <sensor name="navsat" type="navsat">
       <gz_frame_id>gps_link</gz_frame_id>
       <topic>navsat</topic>
-      <update_rate>10</update_rate>
+      <update_rate>5</update_rate>
       <always_on>true</always_on>
     </sensor>
   </gazebo>

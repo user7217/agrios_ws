@@ -1,6 +1,6 @@
 ekf_global:
   ros__parameters:
-    frequency: 50.0
+    frequency: 30.0
     sensor_timeout: 0.1
     two_d_mode: true
     publish_tf: true
@@ -18,7 +18,7 @@ ekf_global:
                    true,  true,  false,
                    false, false, true,
                    false, false, false]
-    odom0_queue_size: 10
+    odom0_queue_size: 5
     odom0_differential: false
     odom0_relative: false
 
@@ -29,7 +29,7 @@ ekf_global:
                    false, false, false,
                    false, false, false,
                    false, false, false]
-    odom1_queue_size: 10
+    odom1_queue_size: 5
     odom1_differential: false
     odom1_relative: false
 
@@ -51,7 +51,7 @@ ekf_global:
                   false, false, false,
                   false, false, false,
                   false, false, false]
-    imu1_queue_size: 10
+    imu1_queue_size: 5
     imu1_differential: false
     imu1_relative: false
 
