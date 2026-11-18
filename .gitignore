@@ -5,4 +5,4 @@ __pycache__/
 *.pyc
 .vscode/
 *.pdf
-frames_*.gv
+frames_*.gvsrc/agrios_coverage/agrios_coverage/*.png
